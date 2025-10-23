@@ -1,0 +1,112 @@
+PEFFAPPZTFFLDFŽPFTZIVPKONTAKTY
+Today is  Oct 23, 2025   5:17 p.m. - 4. (even) week with classes (WS 2025/2026)    We celebrate the name-day of  Teodor   Česká verze Slovenská verzia 
+University information system
+Logged in: Eren Ozturk0 messages     0 documents      0 tasks
+Course catalogue
+Course syllabus EIE36E - Database Systems (FEM - WS 2025/2026)
+Course syllabus EIE36E - Database Systems (FEM - WS 2025/2026)
+1
+SyllabusCourse syllabus
+2
+CzechEnglish
+Title:	Database Systems - INFOA3
+English title:	Database Systems
+Course code:	EIE36E
+Guaranteed by:	Department of Information Engineering (FEM)
+Faculty:	Faculty of Economics and Management
+Semester:	WS 2025/2026
+Mode of completion:	Exam (5 credits)
+Language:	English
+Mode of study:	full-time, other
+Guarantor:	Ing. Josef Pavlíček, Ph.D.
+ 
+Hours per week, examination:
+lecture	2 hours weekly
+seminar	1 hour weekly
+Annotation:
+The main objective of the course is to acquire knowledge and practical skills in the use of relational database technology in the creation of database-based information systems of business subjects. Upon completion of this course, the learners will have the knowledge and skills necessary to create database-based information systems, including their maintenance and practical operation.
+ 
+Prerequsites:
+None
+ 
+Recommended optional programme components:
+None
+ 
+Course objectives:
+The aim of this course is to acquire the necessary knowledge and practical skills related to the use of relational database technology in the creation of database-based information systems of business subjects.
+ 
+Knowledge:
+Graduates will gain knowledge of implementation and subsequent maintenance of database-style information solutions of businesses and other institutions. This knowledge and the corresponding skills acquired will enable them to analyze, propose and then implement the required information solutions on the basis of specifications from future users. Graduates expand and strengthen their gained knowledge and skills in other related technical courses included in their study programme. This knowledge enables them to understand basic concepts, theories and technologies used in the process the process of creating information systems accordance with the needs of practice. Graduates will gain clear awareness of the frontiers of their knowledge and the need of further study for their completion.
+ 
+Skills:
+Graduates of this course are able to effectively apply acquired knowledge and skills in the process of creating functional information systems in accordance with the needs of current practice. They are able to use the corresponding skills in a way that shows a professional approach.
+ 
+Competence - Communication:
+The graduates can flexibly manage and coordinate work activities related to the process of creation of idatabase-based information systems. The graduates are able to organise and manage the corresponding projects and, separately, to lead adequate research teams.
+ 
+Competence - Opinion:
+Graduates of this course are able to professionally perceive realized solutions, they can search for new strategic approaches and can be fully competent. They think systematically.
+ 
+Competence - Education:
+Graduates have the ability to to futher education in matters of design and development of information systémů, continually monitor technical resources to identify own learning needs and effectively select the appropriate forms of continuing self-education and professional growth.
+ 
+Learning activities and teaching methods:
+The course is taught in individual seminars and practiced during the exercises. These exercises take place in computer exercise rooms, where the lecture topics are practiced in the ORACLE database resource within the framework of a gradually realized project.
+ 
+Assessment methods and criteria:
+Credit test (75 % participation in exercises, SQL queries), written and oral examination (SQL commands + database theory)
+ 
+Literature:
+Basic:
+Feurlicht G., Pokorný J. Can Relational DBMS Scale-up to the Cloud?, in Information Systems Development - Reflections, Challenges and New Directions., Springer Science+Business Media, ISBN 978-1-4614-4950-8
+Pokorný J. Dealing with dimensions in data warehousing, in Knowledge Discovery for Bussiness Information Systems, Kluwer Academic Publishers 2000, ISBN 0-7923-7243-3
+Recommended:
+Pokorný J. Database Architectures Current Trends and their Relationships to Requirements of Practice , in Advances in Information Systems Development New Methods and Practice for the Networked Society , Springer Science+Business Media 2007, ISBN 978-0-387-70760-0
+Mishra, S., Beaulieu, A. Mastering Oracle SQL, 2. vyd.,O'Reilly Media, Inc., 2009. Počet stran 496. ISBN0596552475
+Kyte, T.Expert Oracle Database Architecture 9i and 10g Programming Techniques and Solutions. 768 pages. Apress 2005. 2005ISBN1430200677
+ 
+Credit allocation:
+Type of teaching method	Daily attendance
+Hours	Credits
+Individual preparation	40 h	1,6
+Consultations	9 h	0,4
+Examination, prescribed credits (pass/fail)	40 h	1,6
+Lectures	24 h	1,0
+Exercises/Seminars	12 h	0,5
+Total	125 h	5
+ 
+Education plan:
+Lecture
+1.	Basic concepts of relational database technology
+2.	Relational datamodel RDM
+3.	Formal resources of RDM: relational algebra and calculus
+4.	Priciples of query languages
+5.	Introduction to query language SQL
+6.	Creating queries in SQL
+7.	Standardzation and critique of SQL
+8.	Principles of data modelling, E-R model
+9.	Methodics of data model creation
+10.	Data normalization
+11.	Conceptual and logical data model
+12.	Data protection and constraints in database systems
+Seminar
+1.	Basics of ORACLE, project work
+2.	Basics of ORACLE, project work
+3.	ORACLE - commands DDL, project work
+4.	ORACLE - commands DDL, project work
+5.	ORACLE - commands DML, project work
+6.	ORACLE - commands DML, project work
+7.	ORACLE - commands DML, project work
+8.	ORACLE - commands DCL, project work
+9.	ORACLE - commands DCL, project work
+10.	ORACLE - PL/SQL, project work
+11.	ORACLE - PL/SQL, project work
+12.	Test
+
+Last modification made by Jaroslav Roth on 20/03/2025.
+Type of output	
+PDF output (PDF)
+In case of an electronic signature an unsigned version is displayed on the screen. The signed version will appear in the storage approximately within 5 minutes.
+ Generate as a print task in the background
+ Submit document course syllabus to person's storage
+

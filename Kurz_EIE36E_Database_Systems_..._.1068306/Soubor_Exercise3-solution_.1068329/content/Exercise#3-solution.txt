@@ -1,0 +1,63 @@
+//Locate the table demo_customers
+//Use the 'Find Tables' tool, or use describe or select with the appropriate table name to prove its existence
+
+
+//LIST all the entities from the table
+SELECT * FROM demo_customers;
+
+
+//What is the primary key of the table?
+//Have a look at the description of the table, and decide, what column is the primary key
+Describe demo_customers;
+//PRIMARY KEY is defined on the customer_ID
+
+
+//Drop the column phone_number2
+ALTER TABLE demo_customers DROP COLUMN phone_number2;
+
+
+//Increase the credit limit for all the curent customers to 2.000
+UPDATE demo_customers SET credit_limit=2000;
+
+
+//Add yourself as a customer to the table
+//Feel free to add several other attributes
+INSERT INTO demo_customers (cust_first_name,cust_last_name) VALUES ('Petr','Hanzlik');
+
+
+//Delete a customer with postal code „63145“
+//Watch out, if child records exist, delete is not always possible.
+DELETE demo_customers WHERE cust_postal_code=63145;
+
+
+//Select all the customers having the first name „Edward“
+SELECT * FROM demo_customers WHERE cust_first_name='Edward';
+
+//Select all the customers from Atlanta and Chicago, order the output by first name
+SELECT * FROM demo_customers WHERE cust_city='Chicago' OR cust_city='Atlanta' ORDER BY cust_first_name;
+
+
+//Select phone number of Mr. William Hartsfield from Ohio
+SELECT phone_number1 FROM demo_customers WHERE cust_city='Ohio' AND cust_last_name='Hartsfield' AND cust_first_name='William';
+// No one in the table fits such description
+
+
+//Get a complete address of Mr. Albert Lambert
+SELECT cust_street_address1,cust_street_address2,cust_city,cust_state,cust_postal_code FROM demo_customers WHERE cust_last_name='Lambert' AND cust_first_name='Albert';
+
+
+//Set a credit limit of Mr. Logan to 25.000
+UPDATE demo_customers SET credit_limit=25000 WHERE cust_last_name='Logan';
+ORA-02290: check constraint (MASTER.DEMO_CUST_CREDIT_LIMIT_MAX) violated
+// Watch out! If working with existing data, certain constraints can be in effect already
+
+
+//Get the minimum credit_limit amount
+SELECT MIN(credit_limit) FROM demo_customers
+
+//Get all the customers having the current credit_limit set to the minimum amount 
+SELECT * FROM demo_customers WHERE credit_limit = (SELECT MIN(credit_limit) FROM demo_customers)
+
+//Get the total credit limit for all the customers
+SELECT SUM(credit_limit) FROM demo_customers
+

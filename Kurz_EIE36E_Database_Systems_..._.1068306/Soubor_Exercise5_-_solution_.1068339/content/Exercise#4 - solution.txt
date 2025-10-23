@@ -1,0 +1,62 @@
+// create order table
+
+CREATE TABLE orders
+(orderID NUMBER PRIMARY KEY,
+dueDate DATE,
+customerID NUMBER NOT NULL,
+FOREIGN KEY (customerID) REFERENCES DEMO_customers(customer_ID));
+
+//two order by John Dulles
+//1. Select John's Customer_ID
+SELECT customer_ID FROM demo_customers WHERE  cust_first_name='John' AND cust_last_name='Dulles';
+//2. Use it as argument in the insert
+INSERT INTO orders VALUES (1,'02.03.2012',(SELECT customer_ID FROM demo_customers WHERE  cust_first_name='John' AND cust_last_name='Dulles'))
+
+
+//Add an order placed by Mr. Al Coholic
+//1. Check if Al exists
+SELECT customer_ID FROM demo_customers WHERE  cust_first_name='Al' AND cust_last_name='Coholic';
+//2. If not, insert him into Demo_Customers
+INSERT INTO demo_customers ( cust_first_name, cust_last_name) VALUES ('Al','Coholic');
+
+//Prove the referential integrity by trying to delete Mr. Dulles
+DELETE demo_customers WHERE cust_first_name='John' AND  cust_last_name='Dulles'
+ORA-02292: integrity constraint (STUDENT02.DEMO_ORDERS_CUSTOMER_ID_FK) violated - child record found
+// Error states that child record exist!! Possible solution - cascade Delete
+
+//Try to delete Al Coholic
+DELETE demo_customers WHERE cust_first_name='Al' AND  cust_last_name='Coholic'
+// This time it works, because no child record in the 'orders' table is present.
+
+//Modify the orders table so that the delete performed on the demo_customers table will also delete all the referencing orders
+//1. Find the user-defined constraint_name (constraint type: R)
+SELECT CONSTRAINT_NAME FROM user_constraints WHERE table_name='ORDERS' and CONSTRAINT_TYPE = 'R'
+//2. Drop constraint of CONSTRAINT_NAME from 1.
+ALTER TABLE orders DROP CONSTRAINT SYS_C007397
+//3. Cascade DELETE
+ALTER TABLE orders ADD CONSTRAINT f_key FOREIGN KEY (customerID) REFERENCES demo_customers(customer_ID) ON DELETE CASCADE
+
+//Try to delete John Dulles now
+DELETE demo_customers WHERE cust_first_name='John' AND  cust_last_name='Dulles'
+//This time it works because of the ON DELETE CASCADE. Don't forget, when working with existing db objects, there might be some referential integrity constraints defined already. If delete does not work, there is something else related
+
+
+//Write any SQL query that will breach the domain integrity for any column in the ‘orders’
+INSERT INTO orders (duedate) VALUES ('string');
+ORA-01400: cannot insert NULL into ("STUDENT02"."ORDERS"."ORDERID")
+//This will actually breach the entity integrity in three ways. 
+//First of all, the orderID cannot be NULL because of the primary key constraint
+
+INSERT INTO orders (ORDERID,duedate) VALUES (1,'string')
+ORA-01858: a non-numeric character was found where a numeric was expected
+//'Duedate' is defined as a DATE. Generic string as input is therefore not acceptable
+
+INSERT INTO orders (ORDERID,duedate) VALUES (1,'2.2.2222')
+ORA-01400: cannot insert NULL into ("STUDENT02"."ORDERS"."CUSTOMERID")
+//The customerID is declared as NOT NULL too, therefore a value need to be provided
+
+
+//Write any SQL query that will breach the entity integrity for the ‘orders’ table
+Insert into orders (ORDERID,duedate,customerID) values (1,'2.2.2222',2)
+ORA-00001: unique constraint (STUDENT02.SYS_C007396) violated
+//This query eventually brakes the entity integrity because the entity having orderID 1 already exists, which violates the uniqueness constraint implicit to the primary key

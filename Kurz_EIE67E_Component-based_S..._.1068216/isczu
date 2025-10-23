@@ -1,0 +1,115 @@
+PEFFAPPZTFFLDFŽPFTZIVPKONTAKTY
+Today is  Oct 23, 2025   5:17 p.m. - 4. (even) week with classes (WS 2025/2026)    We celebrate the name-day of  Teodor   Česká verze Slovenská verzia 
+University information system
+Logged in: Eren Ozturk0 messages     0 documents      0 tasks
+Course catalogue
+Course syllabus EIE67E - Component-based SW Development (FEM - WS 2025/2026)
+Course syllabus EIE67E - Component-based SW Development (FEM - WS 2025/2026)
+1
+SyllabusCourse syllabus
+2
+CzechEnglish
+Title:	Component-based SW Development - INFOA3
+English title:	Component-based SW Development
+Course code:	EIE67E
+Guaranteed by:	Department of Information Engineering (FEM)
+Faculty:	Faculty of Economics and Management
+Semester:	WS 2025/2026
+Mode of completion:	Exam (5 credits)
+Language:	English
+Mode of study:	full-time, other
+Guarantor:	Ing. Jiří Brožek, Ph.D.
+ 
+Hours per week, examination:
+lecture	2 hours weekly
+2 hours weekly
+seminar	1 hour weekly
+1 hour weekly
+Annotation:
+The aim of the course is to introduce students to the principles of the application design using modern programming languages and development tools. Main focus is on code reusability and using component libraries. Students also learns basics of user interface creation, using of databases in their applications etc. The course also provides introduction to advanced programming techniques like design patterns, refactoring and unit testing. Main programming language for the course is C# language in .NET Framework environment.
+ 
+Prerequsites:
+Algorithm Development
+Programming
+Software Architecture
+Object Modelling
+ 
+Recommended optional programme components:
+Database systems
+ 
+Course objectives:
+The aim of the course is to introduce students to the principles of the application design using modern programming languages and development tools.
+ 
+Knowledge:
+Students gain basic knowledge of C# programming using modern development tools allowing rapid application development. They also gain knowledge about other aspects of this area.
+ 
+Skills:
+Graduates are able to create their own small-scale applications or be part of a team of developers/testers of large-scale applications.
+ 
+Competence - Communication:
+Graduates have knowledge of the terminology related to this area of expertise and are able to correctly articulate and describe requirements, development process etc. which allows them to easily communicate with other involved parties (analysts, developers etc.).
+ 
+Competence - Opinion:
+Graduates are able to decide what technology or tool should be used based on problem description. They are also able to partake in decision processes related to SW analysis and development.
+ 
+Competence - Education:
+Graduates orientate themselves in the area and are able to extend their knowledge either in general or in a more specialized area of expertise related to programming (focus on certain technology, type of problems etc.).
+ 
+Learning activities and teaching methods:
+The course combines lectures with practical sessions. In lectures the students are explained the theory in combination with practical examples presented by the lecturer. In practical sessions the students apply the theory from lectures on practical examples. It allows them to expand their knowledge.
+ 
+Assessment methods and criteria:
+To be eligible for the written exam the student must (the eligibility to participate in the exam is written in the students grade book before the date of the exam with the Czech word "zápočet" or in English "pass-eligible"):
+- Participate in contact teaching (if the student misses more than 25% of classes without accountable reason s/he is not eligible for the exam till s/he does not comply with additional requirements announced by teachers (additional project).
+- Submit in time the project developed using C# language and .NET environment. The project must meet the criteria announced by the teacher as for its quality (if not the project must be resubmitted)
+
+Once the student is eligible for the exam, the exam consists of:
+- Combination of students project defense and oral examination through which the students demonstrate their knowledge, skills and also competencies. The teachers asks 2 questions from the lists available a month before the exam. The student has 10 minutes time to prepare the answers. The students answer in a form of the discussion with the teacher who asks additional questions to check knowledge, skills and the competencies of the student. Following the oral examination students defend their projects. The aim of the project defense is to show understanding of the source code and for the student to present and defend his/hers way of solving the given problem. The students get points (max 100 points for their total performance) which are converted into CULS grade scheme using ECTS grading procedure. The final grade is due to be announced in the day of the exam.
+ 
+Literature:
+Basic:
+Sharp, J. Microsoft Visual C# 2010 - Step by step. 1. vyd. [s.l.] Microsoft Press, 2010. ISBN 978-0735626706
+Archer, T. Inside C#. 1. vyd. [s.l.] Microsoft Press, 2001. ISBN 978-0735612884
+Recommended:
+Pialorsi, P.; Russo, M. Programming Microsoft LINQ. 1. vyd. [s.l.] ]Microsoft Press, 2008. ISBN 978-0735624009
+Gamma, E.; Helm, R.; Johnson, R.; Vlissides, J. Design Patterns Elements of Reusable Object-Oriented Software. 1. vyd. Boston Addison-Wesley, 1994. ISBN 978-0201633610
+ 
+Credit allocation:
+Type of teaching method	Daily attendance
+Hours	Credits
+Project, semester assignments	24 h	1,0
+Individual preparation	20 h	0,8
+Consultations	5 h	0,2
+Examination, prescribed credits (pass/fail)	40 h	1,6
+Lectures	24 h	1,0
+Exercises/Seminars	12 h	0,5
+Total	125 h	5
+ 
+Education plan:
+Lecture
+1.	Introduction, object oriented paradigm
+2.	.NET Framework, introduction to C#, syntax and conventions
+3.	C# syntax and features
+4.	C# syntax and features (cont.)
+5.	C# - advanced features
+6.	LINQ language and working with data
+7.	GUI creation using WinForms and working with graphics with GDI+
+8.	GUI creation using WPF
+9.	Multimedia
+10.	Design patterns and their application
+11.	Application debugging, profiling, refactoring and testing
+12.	Related advanced techniques and technologies (distributed objects, network, serial port communication)
+Seminar
+1.	Working with MS Visual Studio, creating console and GUI applications
+2.	GUI applications, creating GUI using component library, events and their handling
+3.	Database application using LINQ to Objects
+4.	Working with graphics
+5.	Semestral test and project consultations
+6.	Recatoring and testing, checking of projects, credits
+
+Last modification made by Jaroslav Roth on 20/03/2025.
+Type of output	
+PDF output (PDF)
+In case of an electronic signature an unsigned version is displayed on the screen. The signed version will appear in the storage approximately within 5 minutes.
+ Generate as a print task in the background
+ Submit document course syllabus to person's storage

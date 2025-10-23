@@ -1,0 +1,53 @@
+﻿Possible solution:
+
+Create table authors
+CREATE TABLE Authors (id Number(10,0) PRIMARY KEY, name varchar(20), surname varchar(20), username varchar(10));
+
+Create table posts
+CREATE TABLE Posts (id Number(10,0) PRIMARY KEY, created DATE, author_id Number(10,0), post_text VARCHAR(255), FOREIGN KEY (author_id) REFERENCES authors(id))
+
+Insert data
+INSERT INTO Authors VALUES (1, 'Johan', 'Bach', 'JB');
+INSERT INTO Authors VALUES (2, 'Antonio', 'Vivaldi', 'Anthony');
+INSERT INTO Authors VALUES (3, 'Wolfgang', 'Mozart', 'Wolfi');
+INSERT INTO Authors VALUES (4, 'Antonin', 'Dvorak', 'TonyD');
+
+INSERT INTO Posts VALUES (1, current_date, 1, 'How do you turn this on?');
+INSERT INTO Posts VALUES (2, '11/19/1985', 2, 'A CLOB (Character Large Object) is an Oracle data type');
+INSERT INTO Posts VALUES (3, current_date, 2, 'SYSDATE returns the current date and time set for the operating system on which the database resides.');
+INSERT INTO Posts VALUES (4, current_date, 3, 'This section discusses the different types of Oracle Text indexes, their structure, the indexing process, and limitations.');
+
+Select the username (only) of authors who wrote at least one post
+SELECT DISTINCT a.username FROM Authors a, Posts p WHERE a.id = p.author_id;
+
+Select first name + surname of authors with exactly one post
+SELECT name, surname from authors where id IN (SELECT author_id FROM posts GROUP BY author_id HAVING COUNT(*) = 1)
+
+Select username of authors with no posts published
+SELECT name, surname from authors where id NOT IN (SELECT author_id from posts)
+
+Add a new entity named group
+CREATE TABLE groups (id Number(10,0) PRIMARY KEY, name VARCHAR(20), purpose VARCHAR(255));
+
+Add foreing key GroupId to authors table
+ALTER TABLE authors ADD (group_id Number(10,0));
+ALTER TABLE authors ADD CONSTRAINT fk_grp FOREIGN KEY (group_id) REFERENCES groups(id);
+
+Create new user group
+Name: gamers, purpose: entertainment
+INSERT INTO groups VALUES (1, 'gamers', 'entertainment');
+
+All authors should be modified to belong to this user group
+UPDATE authors SET groupId=1
+
+Select username + group name + date of comments
+SELECT g.name, a.username, p.MaxCreated FROM authors a INNER JOIN groups g ON a.group_id  = g.id INNER JOIN (SELECT author_id, MAX(created) AS MaxCreated FROM posts GROUP BY author_id) p ON p.author_id = a.id
+
+Count how many authors belong to the group called ‘gamers’
+SELECT COUNT(*) FROM authors WHERE group_id  = (SELECT id FROM groups WHERE name = 'gamers')
+
+Count how many posts have been written by all the gamers together?
+SELECT COUNT(*) FROM authors a RIGHT JOIN posts p ON p.author_id = a. id WHERE group_id  = (SELECT id FROM groups WHERE name = 'gamers')
+or
+SELECT COUNT(*) FROM posts WHERE author_id IN (SELECT id FROM authors WHERE group_id IN (SELECT id FROM groups WHERE name = 'gamers'))
+

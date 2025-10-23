@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle - Česká zemědělská univerzita v Praze - Database Systems - INFOA3 - ZS 25/26</title>
+    <link rel="stylesheet" type="text/css" href=".//shared/moodle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="d-flex flex-column h-100">
+        <nav class="navbar navbar-light bg-white border-bottom">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="https://moodle.czu.cz" title="Moodle - Česká zemědělská univerzita v Praze">
+                    Moodle - Česká zemědělská univerzita v Praze
+                </a>
+            </div>
+        </nav>
+        <main class="container-fluid mt-2 flex-grow-1 flex-shrink-1">
+            <div>
+                <h1><a href="./index.html">Database Systems - INFOA3 - ZS 25/26</a></h1>
+                <p>EIE36E</p>
+                    <div class="alert alert-info alert-block">
+        Tento soubor je součástí obsahu staženého z  <a href="https://moodle.czu.cz/course/view.php?id=10898">Database Systems - INFOA3 - ZS 25/26</a>.
+    </div>
+
+    <div>
+        <h3>Introduction</h3>
+        <div>
+            <p dir="ltr">The main objective of the course is to acquire knowledge and practical skills in the use of relational database technology for the creation, maintenance and practical operation of database-based information security of enterprises and institutions.  This knowledge will enable you to analyse, design and subsequently implement the required data repositories (databases) based on the specifications of their principals in accordance with the needs of practice. The course will cover the following theoretical issues, which will then be practiced in subsequent exercises in the PostreSQL DBMS environment:</p><p dir="ltr"><br /></p><p dir="ltr"><strong>The course garant</strong></p><p dir="ltr"><br /></p><p dir="ltr"><strong>Ing. Josef Pavlíček Ph.D.</strong></p><p dir="ltr">Josef Pavlicek, Ph.D. Department of Information Engineering</p><p dir="ltr">Office: PEF: 405</p><p dir="ltr">E-mail: josef.pavlicek@google.com or pavlicek@pef.czu.cz</p><p dir="ltr"><br /></p><p dir="ltr">Consultation hours: vary by semester, but generally Wed: 10:45am and Fri: 9:00am. Due to my workload, please arrange conferences via MS-TEAMS or via email (I prefer TEAMS)</p><p dir="ltr"><strong>Seminars:</strong></p><p dir="ltr"><span>Jakub Konopasek </span></p><p dir="ltr"><span><a href="http://pef.czu.cz" target="_blank" rel="noreferrer noopener">konopasek@pef.czu.cz</a></span></p><p dir="ltr"><strong>Course Content:</strong></p><p dir="ltr"></p><ul><li>Introduction to databases</li><li>Conceptual modeling</li><li>Relational Algebra</li><li>Conversion of a conceptual model into a relational model (relational form graphical and written form)</li><li>SQL:</li><li>      DDL - Data Definition Language</li><li>      DML - Data Manipulation Language</li><li>      DCL - Data Control Language</li><li>      TCL - Transaction Control Language</li><li>Functional dependencies, key calculation, data normalization</li><li>Data normalization and normal forms</li><li>Transactional data processing</li></ul><p dir="ltr">The basic study literature is in the <strong><a href="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit#slide=id.p" title="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit#slide=id.p">BIE-DBS Database Cookbook</a></strong>. Yes we are based on my lectures and exercises of the BIE-DBS course, following BI-DBS FIT CTU. The materials sometimes contain specific character and tools that we don't have, however this is not a complication of the course.   </p><p dir="ltr"><br /></p><p dir="ltr"><span style="font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';font-size:1rem;"><strong>The organisation of the course and exam</strong></span><br /></p><p dir="ltr"><span style="font-size:1rem;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Each student will get their own schema in the database server db.kii.pef.czu.cz </span><br /></p><p dir="ltr">They will connect to the schema and here they will have full rights to create their own data model.</p><p dir="ltr">Each student will prepare a term paper independently. This thesis will contain at <strong>least 7 entities</strong> (simple binding entity does not count). They will populate these entities with data. </p><p dir="ltr">Above the data model, the student will create 10 queries in <strong>relational algebra</strong> (abbreviated RA) and <strong>24 SQL </strong>(10 are shared with RA) <strong>querie</strong>s see: term paper<strong> <a href="https://users.fit.cvut.cz/~valenta/bie-dbs/semproject-local/main.xml">Boat delivery</a></strong> Ing. Michal Valenta, Ph.D.</p><p dir="ltr">The semester paper will be handed in at the last res. penultimate exercises to his/her practitioner. He/she will mark it with 1,2,3,4 marks. </p><p dir="ltr"><strong>All RA and SQL queries will be stored</strong> under the student account in the <strong><a href="http://czu.dbsportal.cz">DBS porta</a>l</strong>. </p><p dir="ltr">If the student obtains at least grade 3 he will be allowed to write a short test, verifying his knowledge of SQL, RA, ERD, Data Modeling and theory. </p><p dir="ltr">The overall grade is the average of the test grade and the term paper grade. If the student fails at any point, he/she has to repeat the course. </p><p dir="ltr">Follow:</p><p dir="ltr"></p><ul><li><strong><a href="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit?usp=sharing">Important milestones</a></strong></li><li><strong><a href="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit?usp=sharing">Final evaluation table</a></strong> </li></ul><p></p><p dir="ltr"><br /></p><p dir="ltr"><br /></p><p dir="ltr"><span style="font-size:1rem;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">You can also use the tool to work with the PosgreSQL database and basic Relational Algebra training by:</span></p><p dir="ltr"><span style="font-size:1rem;"><a href="http://czu.dbsportal.cz"><strong>czu.dbsportal.cz</strong></a> by your university account example: "xpavlj002" and password</span></p><p dir="ltr"><span style="font-size:1rem;"><a href="https://psqlc.db.kii.pef.czu.cz/SQLCLient">CZU-PSQClient</a></span></p><p dir="ltr"><a href="https://dbs.fit.cvut.cz/kreslitko/" target="_blank" rel="noreferrer noopener">Data modeler</a></p><p dir="ltr">More SQL tools: <a href="http://sqlfiddle.com" target="_blank" rel="noreferrer noopener">SQLFiddle</a>, <a href="https://www.convertcsv.com/csv-to-sql.htm" target="_blank" rel="noreferrer noopener">CSVtoSQL</a></p><p dir="ltr">Generate data tools: <a href="https://generatedata.com/generator" target="_blank" rel="noreferrer noopener">Generatedata</a>,  <a href="https://www.mockaroo.com" target="_blank" rel="noreferrer noopener">Mockaroo</a></p><p dir="ltr"></p><p dir="ltr"><br /></p><p dir="ltr"><strong>Your project database </strong></p><p dir="ltr">Login: Your school handle - for example <strong>xkonj108</strong></p><p dir="ltr">Database:  Your school handle - for example <strong>xkonj108</strong></p><p dir="ltr">Server: db.kii.pef.czu.cz</p><p dir="ltr">Password: get during seminar</p><p dir="ltr"></p><p dir="ltr">Add new connection in Connection tab on <a href="http://czu.dbsportal.cz/" target="_blank" rel="noreferrer noopener">http://czu.dbsportal.cz/</a> (see screenshot bellow)</p><p dir="ltr">After that select this connection in Semester work tab - connection - and then all SQL and RA commands in semester work will work with selected database.</p><p dir="ltr"><img src="_course/section/2024-11-08%2013.32.10%20czu.dbsportal.cz%20054c87f5b122.jpg" alt="Connecting your project DB" width="800" height="422" class="img-fluid atto_image_button_text-bottom" /><br /></p><p dir="ltr"></p>
+        </div>
+        <ul>
+            <li><a href="./Frum_Oznmen_.1068312/index.html">Oznámení (Fórum)</a></li>
+            <li><a href="./Sloka_Diagrams_from_Labs_.1068313/index.html">Diagrams from Labs (Složka)</a></li>
+        </ul>
+        <hr>
+        <h3></h3>
+        <ul>
+            <li><a href="./Oblast_textu_a_mdi__Presentat..._.1068314/index.html">* Presentation - Lab 1 * Data modeler (Oblast textu a médií)</a></li>
+            <li><a href="./Soubor_LESSON31_DDL_.1068315/index.html">LESSON#3.1 DDL (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON32_DML_.1068316/index.html">LESSON#3.2 DML (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON33_DML2_.1068317/index.html">LESSON#3.3 DML2 (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON34_DATA_FORMATIN..._.1068318/index.html">LESSON#3.4 DATA FORMATING GUIDE (Soubor)</a></li>
+            <li><a href="./Oblast_textu_a_mdi_Primary_an..._.1068319/index.html">Primary and foreign keys example. In each Record, ... (Oblast textu a médií)</a></li>
+        </ul>
+        <hr>
+        <h3></h3>
+        <ul>
+            <li><a href="./Soubor_EXERCISE2_.1068320/index.html">EXERCISE#2 (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise2-solution_.1068321/index.html">Exercise#2-solution (Soubor)</a></li>
+            <li><a href="./URL_SQL_Functions_-_an_overview_.1068322/index.html">SQL Functions - an overview (URL)</a></li>
+        </ul>
+        <hr>
+        <h3>Data integrity and work with multiple tables</h3>
+        <ul>
+            <li><a href="./Soubor_LESSON4_Integrity_.1068323/index.html">LESSON#4 Integrity (Soubor)</a></li>
+            <li><a href="./URL_SQL_Constraints_-_overview_.1068324/index.html">SQL Constraints - overview (URL)</a></li>
+            <li><a href="./Soubor_LESSON5_Working_with_m..._.1068325/index.html">LESSON#5 Working with multiple tables (Soubor)</a></li>
+            <li><a href="./Strnka_DEMO_CUSTORMERS_table_DDL_.1068326/index.html">DEMO_CUSTORMERS table DDL (Stránka)</a></li>
+            <li><a href="./Soubor_EXERCISE3_-_Try_it_in_..._.1068328/index.html">EXERCISE#3 - Try it in your free time (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise3-solution_.1068329/index.html">Exercise#3-solution (Soubor)</a></li>
+        </ul>
+        <hr>
+        <h3>Triggers, views and a lot of practical things to try</h3>
+        <ul>
+            <li><a href="./Soubor_LESSON6_DATABASE_TRIGGERS_.1068330/index.html">LESSON#6 DATABASE TRIGGERS (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON7_DDL_VIEW_.1068331/index.html">LESSON#7 DDL VIEW (Soubor)</a></li>
+            <li><a href="./Soubor_EXERCISE_4_.1068332/index.html">EXERCISE #4 (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise4-solution_.1068333/index.html">Exercise#4-solution (Soubor)</a></li>
+            <li><a href="./URL_Home_assignment__SQL_Wild..._.1068334/index.html">Home assignment : SQL Wildcards (URL)</a></li>
+        </ul>
+        <hr>
+        <h3>TCL + Query optimisation</h3>
+        <div>
+            <p><strong>HOMEWORK FILES</strong></p>
+        </div>
+        <ul>
+            <li><a href="./Soubor_LESSON8_TRANSACTION_ST..._.1068335/index.html">LESSON#8 TRANSACTION STATEMENTS (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON_9_Query_optimis..._.1068336/index.html">LESSON #9 Query optimisation (Soubor)</a></li>
+            <li><a href="./Soubor_EXERCISE5_.1068338/index.html">EXERCISE#5 (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise5_-_solution_.1068339/index.html">Exercise#5 - solution (Soubor)</a></li>
+            <li><a href="./Soubor_EXERCISE__DB_TRIGGERS_.1068340/index.html">EXERCISE : DB TRIGGERS (Soubor)</a></li>
+            <li><a href="./Soubor_EXERCISE__Solution_.1068341/index.html">EXERCISE : Solution (Soubor)</a></li>
+            <li><a href="./Soubor_EXERCISE6_-_ER_Diagram_.1068342/index.html">EXERCISE#6 - ER Diagram (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise6-solution_.1068343/index.html">Exercise#6-solution (Soubor)</a></li>
+        </ul>
+        <hr>
+        <h3>Database Security</h3>
+        <ul>
+            <li><a href="./Soubor_Lesson11_-_Database_se..._.1068345/index.html">Lesson#11 - Database security (Soubor)</a></li>
+        </ul>
+        <hr>
+        <h3>Normalisation overview</h3>
+        <ul>
+            <li><a href="./Soubor_EXERCISE8_.1068346/index.html">EXERCISE#8 (Soubor)</a></li>
+            <li><a href="./Soubor_Exercise8_-_solution_.1068347/index.html">Exercise#8 - solution (Soubor)</a></li>
+            <li><a href="./Soubor_LESSON_9_-_Database_No..._.1068348/index.html">LESSON #9 - Database Normalisation (Soubor)</a></li>
+        </ul>
+        <hr>
+        <h3>Conclusion sessions</h3>
+        <hr>
+        <h3>CREDIT TESTS, PROJECT SUBMISSION FORMS</h3>
+        <hr>
+        <h3>EXAMS</h3>
+        <div>
+            <p dir="ltr" style="text-align:left;"></p><p dir="ltr"></p><ul><li>only for those who have assessment</li><li>exam test is written in DBS portal</li><li>up to 60 points</li><li>no minimum is set</li><li>in case if student lacks up to 5 points to better grade, oral exam is possible</li></ul><p></p><p dir="ltr">Follow:</p><p dir="ltr"></p><ul><li><strong><a href="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit?usp=sharing">Important milestones</a></strong></li><li><strong><a href="https://docs.google.com/presentation/d/1TJ0Ezo4jlG0kYk_e6CanN7dWEvXEwVIr45cWfaFW514/edit?usp=sharing">Final evaluation table</a></strong> </li></ul><br /><p></p><br /><p></p><p></p>
+        </div>
+        <hr>
+        <h3>2 December - 6 December (STUDY BLOCK)</h3>
+        <ul>
+            <li><a href="./URL_Pagila_sample_database_fo..._.1068365/index.html">Pagila sample database for PostGRES (URL)</a></li>
+            <li><a href="./Strnka_Some_general_notes_.1068366/index.html">Some general notes (Stránka)</a></li>
+            <li><a href="./URL_A_very_basic_tutorial_on_..._.1068367/index.html">A very basic tutorial on some advanced topics (URL)</a></li>
+            <li><a href="./Soubor_Presentation_materials..._.1068368/index.html">Presentation materials for Study Block (Soubor)</a></li>
+        </ul>
+        <hr>
+    </div>
+
+            </div>
+        </main>
+        <footer id="page-footer" class="py-3">
+            <div class="container">
+                <div>Tento soubor je součástí obsahu staženého z <a href="https://moodle.czu.cz/course/view.php?id=10898">Database Systems - INFOA3 - ZS 25/26</a> od Ozturk Eren dne čtvrtek, 23. října 2025, 17.21.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+// Create a table with following structure: product_id, product_name..
+CREATE TABLE product_info (product_id number(22) NOT NULL PRIMARY KEY, product_name varchar(50), category varchar (30), product_avail varchar(1), list_price number);
+
+//Insert data into product_info
+INSERT INTO product_info VALUES ('1','Business Shirt', 'Men','Y',50);
+INSERT INTO product_info VALUES ('2','Trousers', 'Men','Y',80);
+INSERT INTO product_info VALUES ('3','Jacket', 'Men','Y',150);
+INSERT INTO product_info VALUES ('4','Blouse', 'Women','Y',60);
+INSERT INTO product_info VALUES ('5','Skirt', 'Women','Y',80);
+INSERT INTO product_info VALUES ('6','Ladies Shoes', 'Women','Y',120);
+
+// Add a new attribute to the product_info table storing information about product colour
+ALTER TABLE product_info ADD (colour VARCHAR(20));
+
+//Update Business Shirt's colour to blue, all the other entities should be black;
+UPDATE product_info SET colour='blue' WHERE product_name = 'Business Shirt';
+UPDATE product_info SET colour='black' WHERE colour IS NULL;
+
+//Select product name with price and colour 
+SELECT product_name,list_price,colour FROM product_info;
+
+
+//Select products from the “Men” category
+SELECT product_name,list_price,colour FROM product_info WHERE category='Men';
+
+//List product name and price only, order from the most expansive to the cheapest
+SELECT product_name,list_price FROM product_info ORDER BY list_price;
+
+//List once all the available colours in the product portfolio
+SELECT DISTINCT colour from product_info;
+
+// Select products from the “Men” category cheaper than 100$
+SELECT * FROM product_info WHERE list_price<100 AND category='Men';
+
+
+// What is the maximum, minimum, average price of a product?
+SELECT MAX(list_price) FROM product_info;
+SELECT MIN(list_price) FROM product_info;
+SELECT AVG(list_price) FROM product_info;
+
+// Select complete information about the most expansive product.
+SELECT * FROM product_info WHERE list_price = (SELECT MAX(list_price) FROM product_info);
+
+// Count how many products of each colour are available in the table 
+SELECT colour,COUNT(*) FROM product_info GROUP BY colour;
+
+//Delete all the products cheaper than 50$
+DELETE FROM product_info WHERE list_price<50;
+
+//Remove the entire product_info table including all the data inside
+DROP TABLE product_info;
+
+
+
+
+

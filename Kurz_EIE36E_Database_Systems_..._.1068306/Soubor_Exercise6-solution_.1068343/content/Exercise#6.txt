@@ -1,0 +1,40 @@
+// The SQL cannot represent many-to-many relationships, remember? To solve this, the relation type "Passed" is replaced with a table results, conjoining the students and courses through foreign keys
+CREATE TABLE students
+(
+code CHAR(8) PRIMARY KEY,
+name VARCHAR(40),
+surname VARCHAR(40),
+birth DATE
+);
+
+CREATE TABLE courses
+(
+code CHAR(6) PRIMARY KEY,
+name VARCHAR(30),
+description VARCHAR(100)
+);
+
+DROP TABLE results
+
+// Watch out, you cannot name the attribute examDate just as "date", due to the mismatch with domain type.
+// This code does not manage referential integrity any further..
+
+CREATE TABLE results
+(
+studentCode CHAR(8) NOT NULL,
+courseCode CHAR(6) NOT NULL,
+examDate DATE,
+result NUMBER(1,0) CONSTRAINT check_res CHECK (result BETWEEN 1 AND 4),
+FOREIGN KEY (studentCode) REFERENCES students(code),
+FOREIGN KEY (courseCode) REFERENCES courses(code),
+PRIMARY KEY (studentCode,courseCode,examDate)
+);
+
+INSERT INTO courses VALUES ('EIE36E','Database system', 'Introduction to relational database');
+INSERT INTO students VALUES ('xhanp117','Petr','Hanzlik','12.14.1987');
+INSERT INTO results VALUES ('xhanp117','EIE36E',current_date,1);
+
+Select all the exams a student has passed together with the course name and result.
+Let's say we want all the 
+S
+SELECT c.name, r.examDate, r.result FROM results r INNER JOIN courses c ON r.courseCode = c.code WHERE s.code = 'xhanp117'

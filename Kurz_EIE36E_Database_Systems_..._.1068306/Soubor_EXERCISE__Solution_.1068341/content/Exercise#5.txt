@@ -1,0 +1,39 @@
+//create the table t2
+CREATE TABLE t2 (c1 NUMBER PRIMARY KEY, c2 VARCHAR(30))
+describe t2
+
+// create the sequence object
+CREATE SEQUENCE t_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+// CACHE parameter explanation from ORACLE documentation:
+// The database might skip sequence numbers if you choose to cache a set of sequence numbers. For example, when an instance abnormally shuts down (for example, when an 
+// instance failure occurs or a SHUTDOWN ABORT statement is issued), sequence numbers that have been cached but not used are lost. Also, sequence numbers that have been 
+// used but not saved are lost as well. The database might also skip cached sequence numbers after an export and import. 
+
+// Oracle DBMS never guarantees that sequences are gap-free (hardly ever an issue in practical applications). When Oracle DBMS caches sequence values, it takes say 20
+// values and stores them in the shared pool. The nextval for the sequence in this case is incremented by 20. As long as the values are available in the cache, the DBMS
+// can retrieve this values. If the cached values are all used or if the cache ages out, the DBMS requests a new set of values. 
+
+// If you need a gap-free sequence, you can use NOCACHE parameter instead. However, this has a negative impact on performance. 
+
+
+//create trigger
+CREATE TRIGGER t_trigger
+BEFORE INSERT ON t2
+FOR EACH ROW
+BEGIN
+SELECT t_seq.nextval INTO :new.c1 FROM DUAL;
+END;
+
+//insert and show some data to prove the concept
+INSERT INTO t2 (c2) VALUES ('ORACLE');
+INSERT INTO t2 (c2) VALUES ('SQL');
+SELECT * FROM t2;
+
+//drop all three objects
+DROP SEQUENCE t_seq;
+DROP TRIGGER t_trigger;
+DROP TABLE t2;

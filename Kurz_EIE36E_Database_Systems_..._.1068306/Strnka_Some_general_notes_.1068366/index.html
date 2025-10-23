@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle - Česká zemědělská univerzita v Praze - Database Systems - INFOA3 - ZS 25/26</title>
+    <link rel="stylesheet" type="text/css" href="..//shared/moodle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="d-flex flex-column h-100">
+        <nav class="navbar navbar-light bg-white border-bottom">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="https://moodle.czu.cz" title="Moodle - Česká zemědělská univerzita v Praze">
+                    Moodle - Česká zemědělská univerzita v Praze
+                </a>
+            </div>
+        </nav>
+        <main class="container-fluid mt-2 flex-grow-1 flex-shrink-1">
+            <div>
+                <h1><a href="../index.html">Database Systems - INFOA3 - ZS 25/26</a></h1>
+                <p>EIE36E</p>
+                    <h2>
+        Some general notes
+    </h2>
+
+    <div class="alert alert-info alert-block">
+        Tento soubor je součástí obsahu staženého z <a href="{$a->courselink}">{$a->coursename}</a> od {$a->userfullname} dne čtvrtek, 23. října 2025, 17.21. Všimněte si, že se obsah a některé soubory větší než 50 MB  nestáhnou.    </div>
+
+    <h3>Popis</h3>
+    <div>
+        <p style="text-align:left;">Some notes and code snippets we will use this week.</p><h5 style="text-align:left;"></h5><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p><p dir="ltr"></p>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Obsah stránky</h3>
+        <div>
+            <div>
+                <p dir="ltr" style="text-align:left;"></p><h5>Here's the SQL to generate a table of names:</h5><p dir="ltr"></p><pre>CREATE TABLE tags (<br />    tag_id SERIAL PRIMARY KEY,<br />    tag VARCHAR(50) NOT NULL<br />);<br />
+INSERT INTO tags (tag) VALUES</pre><pre>    ('Alan'),<br />    ('Brian'),<br />    ('Charlie'),<br />    ('Dave'),<br />    ('Eve'),<br />    ('Frances'),<br />    ('George'),<br />    ('Henry'),<br />    ('Inga'),<br />    ('Jack'),<br />    ('Karen'),<br />    ('Larry'),<br />    ('Mary'),<br />    ('Niks'),<br />    ('Oskar'),<br />    ('Petr'),<br />    ('Queen'),<br />    ('Roger'),<br />    ('Simon'),<br />    ('Tania'),<br />    ('Ulrika'),<br />    ('Vera'),<br />    ('Walter'),<br />    ('Xavier'),<br />    ('Yvonne'),<br />    ('Ziggy');</pre><h5>An introduction to B-Trees</h5><p>B-Trees are a fundamental structure in databases that allow a very large amount of data to be managed. Before we look at them in the slides, here is a good introduction:<br /><a href="https://www.geeksforgeeks.org/introduction-of-b-tree-2/" class="_blanktarget">https://www.geeksforgeeks.org/introduction-of-b-tree-2/</a><br />Video <a href="https://youtu.be/FgWbADOG44s?si=TFvCia_9nc2_gQwM" class="_blanktarget">https://youtu.be/FgWbADOG44s?si=TFvCia_9nc2_gQwM</a><br />Properties <a href="https://youtu.be/fAfuZiFDpRo?si=BFzUuOIxIukMUxuw" class="_blanktarget">https://youtu.be/fAfuZiFDpRo?si=BFzUuOIxIukMUxuw</a><br /><span style="font-size:1rem;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">Insertions <a href="https://youtu.be/tT2DT9Z4H-0?si=i4VPwS34y4g2w068" class="_blanktarget">https://youtu.be/tT2DT9Z4H-0?si=i4VPwS34y4g2w068</a></span></p><h4><span style="font-size:16px;">SQL Subqueries</span></h4><p><a href="https://www.w3resource.com/sql/subqueries/understanding-sql-subqueries.php" class="_blanktarget">https://www.w3resource.com/sql/subqueries/understanding-sql-subqueries.php</a></p><h3>SQL commands</h3><h4>G1 <span lang="en-us" xml:lang="en-us">Subquery inside WHERE</span></h4><p><span lang="en-us" xml:lang="en-us">How expensiv is this query?</span></p><p></p><pre>select pna from pat where pid in (select distinct pid from vis where did = (select did from doc where dna = 'King'));</pre><div><pre>explain select pna from pat where pid in (select distinct pid from vis where did = (select did from doc where dna = 'King'));<br /><br />create view drking as<br />    select pna from pat where pid in (select distinct pid from vis where did = (select did from doc where dna = 'King'));</pre></div><h4>G2 <span lang="en-us" xml:lang="en-us">Subquery inside FROM</span></h4><p>This is equivalent to the G1 subquery above it is needlessly complicated.</p><p></p><div><pre>elect pna from (select * from pat where pid in (select distinct pid from vis where did = (select did from doc where dna = 'King')));<br /><br />explain select pna from (select * from pat where pid in (select distinct pid from vis where did = (select did from doc where dna = 'King')));</pre></div><h3>L Subquery create view</h3><p></p><pre>postgres=# select * from doc;<br /> did |  dna   |     spe      <br />-----+--------+--------------<br />   1 | King   | Orthoped<br />   2 | Jones  | Dentist<br />   3 | Ford   | Internist<br />   4 | Smith  | Internist<br />   5 | Blake  | Orthoped<br />   6 | Simon  | Face-Lifter<br />   7 | Scott  | Dentist<br />   8 | Evans  | Pediatrician<br />   9 | Allen  | Cardiologist<br />  10 | Taylor | Dentist<br />  11 | Turner | Cardiologist<br />  12 | Simon  | Internist<br />  13 | Clark  | Orthoped<br />  14 | Miller | Face-Lifter<br />  15 | Ford   | Pediatrician<br />  16 | Jones  | Dentist<br />  17 | Smith  | Internist<br />  18 | Brown  | Orthoped<br />  19 | Adams  | Neurologist<br />  20 | James  | Cardiologist<br />  21 | King   | Face-Lifter<br />  22 | Blake  | Dentist<br />  23 | Harris | Orthoped<br />  24 | Moore  | Pediatrician<br />  25 | Taylor | Neurologist<br />  26 | Scott  | Internist<br />  27 | Evans  | Face-Lifter<br />  28 | Allen  | Orthoped<br />  29 | Turner | Pediatrician<br />  30 | Adams  | Cardiologist<br />  31 | Blake  | Orthoped<br />  32 | Jones  | Neurologist<br />postgres=# select * from doc where spe = 'Dentist';<br /> did |  dna   |   spe   <br />-----+--------+---------<br />   2 | Jones  | Dentist<br />   7 | Scott  | Dentist<br />  10 | Taylor | Dentist<br />  16 | Jones  | Dentist<br />  22 | Blake  | Dentist<br />  34 | Brown  | Dentist<br />  41 | Allen  | Dentist<br />  51 | Simon  | Dentist<br />  59 | Moore  | Dentist<br />  66 | Taylor | Dentist<br />  73 | King   | Dentist<br />  80 | Scott  | Dentist<br />  85 | Brown  | Dentist<br />  92 | Clark  | Dentist<br />  97 | Allen  | Dentist<br />(15 rows)<br />postgres=# create view doc_dentist as<br />postgres-# select * from doc where spe = 'Dentist';<br />CREATE VIEW<br />postgres=# select * from doc_dentist;<br /> did |  dna   |   spe   <br />-----+--------+---------<br />   2 | Jones  | Dentist<br />   7 | Scott  | Dentist<br />  10 | Taylor | Dentist<br />  16 | Jones  | Dentist<br />  22 | Blake  | Dentist<br />  34 | Brown  | Dentist<br />  41 | Allen  | Dentist<br />  51 | Simon  | Dentist<br />  59 | Moore  | Dentist<br />  66 | Taylor | Dentist<br />  73 | King   | Dentist<br />  80 | Scott  | Dentist<br />  85 | Brown  | Dentist<br />  92 | Clark  | Dentist<br />  97 | Allen  | Dentist<br />(15 rows)<br />postgres=# select * from doc_dentist order by dna;<br />postgres=# select * from doc_dentist order by dna;<br /> did |  dna   |   spe   <br />-----+--------+---------<br />  41 | Allen  | Dentist<br />  97 | Allen  | Dentist<br />  22 | Blake  | Dentist<br />  85 | Brown  | Dentist<br />  34 | Brown  | Dentist<br />  92 | Clark  | Dentist<br />   2 | Jones  | Dentist<br />  16 | Jones  | Dentist<br />  73 | King   | Dentist<br />  59 | Moore  | Dentist<br />  80 | Scott  | Dentist<br />   7 | Scott  | Dentist<br />  51 | Simon  | Dentist<br />  10 | Taylor | Dentist<br />  66 | Taylor | Dentist<br />(15 rows)<br />postgres=# select * from doc_dentist where dna = 'Allen';<br />postgres=# select * from doc_dentist where dna = 'Allen';<br /> did |  dna  |   spe   <br />-----+-------+---------<br />  41 | Allen | Dentist<br />  97 | Allen | Dentist<br />(2 rows)<br />postgres=# select * from doc_dentist;<br /> did |  dna   |   spe   <br />-----+--------+---------<br />   2 | Jones  | Dentist<br />   7 | Scott  | Dentist<br />  10 | Taylor | Dentist<br />  16 | Jones  | Dentist<br />  22 | Blake  | Dentist<br />  34 | Brown  | Dentist<br />  41 | Allen  | Dentist<br />  51 | Simon  | Dentist<br />  59 | Moore  | Dentist<br />  66 | Taylor | Dentist<br />  73 | King   | Dentist<br />  80 | Scott  | Dentist<br />  85 | Brown  | Dentist<br />  92 | Clark  | Dentist<br />  97 | Allen  | Dentist<br />(15 rows)</pre><pre></pre><h3>M Use View in Other Query</h3><p>postgres=# select * from vis where did in (select did from doc_dentist); </p>    dvi     | did | pid | dia | typ | pri <br />------------+-----+-----+-----+-----+-----<br /> 1996-01-08 |   2 |   1 | D2  | H   |  52<br /> 1999-03-26 |   2 |   2 | D1  | O   |  23<br /> 1999-01-27 |   2 |   1 | D2  | O   |  28<br /> 1997-03-24 |   2 |   4 | D1  | H   |  99<br /> 2002-06-28 |   7 |  28 | D2  | H   |   2<br /> 1997-09-07 |   7 |  89 | D4  | H   |  88<br /> 2018-11-15 |  51 |  92 | D1  | H   |  89<br /> 2006-10-27 |  92 |  63 | D1  | H   |  80<br /> 1990-04-28 |  41 |  18 | D2  | O   |  54<br /> 2015-02-28 |  80 |  40 | D1  | H   |  84<br /> 2002-02-10 |  92 |  11 | D1  | O   |  95<br /> 1997-06-22 |  73 |  58 | D3  | O   |  80<br /> 2005-02-12 |  85 |  87 | D1  | O   |  20<br /> 1995-06-29 |  22 |  36 | D1  | O   |  40<br /> 2017-04-15 |  51 |   5 | D4  | H   |  24<br /> 2015-01-12 |  41 |  45 | D3  | H   |  92<br /> 1994-09-10 |  59 |  56 | D1  | O   |  39<br /> 2018-05-21 |  59 |  11 | D2  | H   |  11<br />(18 rows)<br /><h3>N Select without VALUES clause</h3><h3><span style="font-size:1rem;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">This copies some column tada from one tuple to another, either in the same table or a different table.</span></h3><p></p><pre></pre><p>insert into pat (pna, pad, pte, pdb) select pna, pad, pte, pdb from pat where pid = 109;</p><br /><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><p></p><br /><br /><p></p><h3></h3><p></p>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+            </div>
+        </main>
+        <footer id="page-footer" class="py-3">
+            <div class="container">
+                <div>Tento soubor je součástí obsahu staženého z <a href="https://moodle.czu.cz/course/view.php?id=10898">Database Systems - INFOA3 - ZS 25/26</a> od Ozturk Eren dne čtvrtek, 23. října 2025, 17.21.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

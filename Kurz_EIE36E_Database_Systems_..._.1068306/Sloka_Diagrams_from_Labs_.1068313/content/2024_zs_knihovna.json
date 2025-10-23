@@ -1,0 +1,1014 @@
+{
+  "entities": [
+    {
+      "name": "Author",
+      "parent": null,
+      "attr": [
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "id_author",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1236.7587253538784,
+        "y": -1187.4609870677807,
+        "width": 127.77777777777783,
+        "height": 96.11111111111109
+      }
+    },
+    {
+      "name": "Author2",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_author",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "attribute",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 992.2723808160617,
+        "y": -1204.0552914562,
+        "width": 148,
+        "height": 96.00000000000011
+      }
+    },
+    {
+      "name": "Book",
+      "parent": null,
+      "attr": [
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "id_book",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1207.0005799904693,
+        "y": -940.8110288388768,
+        "width": 112.1438217163086,
+        "height": 116.5
+      }
+    },
+    {
+      "name": "Book2",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_book",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 967.272380816062,
+        "y": -925.0552914561999,
+        "width": 174.00000000000023,
+        "height": 103.00000000000011
+      }
+    },
+    {
+      "name": "Copies",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1615.8222174173698,
+        "y": -943.4133680201621,
+        "width": 112.14388275146484,
+        "height": 112.77777777777806
+      }
+    },
+    {
+      "name": "Is_author",
+      "parent": null,
+      "attr": [
+        {
+          "name": "sort",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1238.60571424022,
+        "y": -1036.8945771704807,
+        "width": 87.2333984375,
+        "height": 53.93330955505371
+      }
+    },
+    {
+      "name": "Is_author2",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_author",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "id_book",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "id_is_aut",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sort",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 985.2723808160617,
+        "y": -1068.4838628847715,
+        "width": 140.00000000000023,
+        "height": 112.73332023620605
+      }
+    },
+    {
+      "name": "Item of rob",
+      "parent": null,
+      "attr": [
+        {
+          "name": "date of return",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1757.4888840840374,
+        "y": -987.3022569090524,
+        "width": 158.623046875,
+        "height": 90.06657218933105
+      }
+    },
+    {
+      "name": "Librarian",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 1940.7783577682476,
+        "y": -1238.9221399499877,
+        "width": 113,
+        "height": 128
+      }
+    },
+    {
+      "name": "Printouts",
+      "parent": null,
+      "attr": [
+        {
+          "name": "yer published",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "language",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1410.5999951951485,
+        "y": -941.3022569090505,
+        "width": 154.64376831054688,
+        "height": 115
+      }
+    },
+    {
+      "name": "Publisher",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 1439.1555507507037,
+        "y": -1105.0800346868295,
+        "width": 95.55555555555566,
+        "height": 116.66666666666674
+      }
+    },
+    {
+      "name": "Reader",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 2234.889468879359,
+        "y": -952.1999177277659,
+        "width": 101.59366989135742,
+        "height": 121
+      }
+    },
+    {
+      "name": "Record of borrowing",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 1953.6672466571367,
+        "y": -967.5332510610991,
+        "width": 215.4061737060547,
+        "height": 122.5
+      }
+    },
+    {
+      "name": "Reservation",
+      "parent": null,
+      "attr": [
+        {
+          "name": "attribute",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1771.3777729729259,
+        "y": -797.3022569090505,
+        "width": 148.33333333333348,
+        "height": 95
+      }
+    },
+    {
+      "name": "Shelf",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 1644.1555507507037,
+        "y": -1087.3022569090508,
+        "width": 103.88888888888914,
+        "height": 66.66666666666674
+      }
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Is_author",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1282.22241345897,
+            "y": -1036.8945771704807,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1291.4350138508687,
+              "y": -1064.1222265635752
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Author",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1300.6476142427673,
+            "y": -1091.3498759566696,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1291.4350138508687,
+              "y": -1064.1222265635752
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Is_author",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1282.22241345897,
+            "y": -982.961267615427,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1272.6474521537968,
+              "y": -961.8861482271519
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Book",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1263.0724908486236,
+            "y": -940.8110288388768,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1272.6474521537968,
+              "y": -961.8861482271519
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Is_author2",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1055.2723808160617,
+            "y": -1068.4838628847715,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1060.7723808160617,
+              "y": -1088.2695771704857
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Author2",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1066.2723808160617,
+            "y": -1108.0552914562,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1060.7723808160617,
+              "y": -1088.2695771704857
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Is_author2",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1055.2723808160617,
+            "y": -955.7505426485654,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1054.772380816062,
+              "y": -940.4029170523827
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Book2",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1054.2723808160622,
+            "y": -925.0552914561999,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1054.772380816062,
+              "y": -940.4029170523827
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Item of rob",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1757.4888840840374,
+            "y": -942.2689708143869,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1742.7274921264361,
+              "y": -914.64672497283
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Copies",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1727.9661001688346,
+            "y": -887.0244791312731,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1742.7274921264361,
+              "y": -914.64672497283
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Librarian",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1974.0283577682476,
+            "y": -1110.9221399499877,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1905.4143826448926,
+              "y": -1049.11219842952
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Item of rob",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1836.8004075215374,
+            "y": -987.3022569090524,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1905.4143826448926,
+              "y": -1049.11219842952
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Printouts",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1410.5999951951485,
+            "y": -883.8022569090505,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1364.8721984509632,
+              "y": -883.1816428739637
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Book",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1319.144401706778,
+            "y": -882.5610288388768,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1364.8721984509632,
+              "y": -883.1816428739637
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Printouts",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1565.2437635056954,
+            "y": -883.8022569090505,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1590.5329904615326,
+              "y": -885.4133680201618
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Copies",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1615.8222174173698,
+            "y": -887.0244791312731,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1590.5329904615326,
+              "y": -885.4133680201618
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Publisher",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1486.9333285284815,
+            "y": -988.4133680201628,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1476.8026115688463,
+              "y": -964.8578124646067
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Printouts",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1466.671894609211,
+            "y": -941.3022569090505,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1476.8026115688463,
+              "y": -964.8578124646067
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Record of borrowing",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 2014.1672466571367,
+            "y": -967.5332510610991,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 2005.7228022126922,
+              "y": -1039.2276955055434
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Librarian",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1997.2783577682476,
+            "y": -1110.9221399499877,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 2005.7228022126922,
+              "y": -1039.2276955055434
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Record of borrowing",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 2169.0734203631914,
+            "y": -906.2832510610991,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 2201.981444621275,
+              "y": -898.9915843944325
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Reader",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 2234.889468879359,
+            "y": -891.6999177277659,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 2201.981444621275,
+              "y": -898.9915843944325
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Record of borrowing",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1953.6672466571367,
+            "y": -906.2832510610991,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1934.889588808087,
+              "y": -926.376087318409
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Item of rob",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1916.1119309590374,
+            "y": -946.4689235757189,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1934.889588808087,
+              "y": -926.376087318409
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Reservation",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1771.3777729729259,
+            "y": -749.8022569090505,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1627.488884084037,
+              "y": -749.8022569090505
+            },
+            {
+              "x": 1601.8663237948663,
+              "y": -804.9272569090505
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Printouts",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1565.2437635056954,
+            "y": -860.0522569090505,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1601.8663237948663,
+              "y": -804.9272569090505
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Reservation",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1919.7111063062594,
+            "y": -749.8022569090505,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 2077.300287592809,
+              "y": -808.1260873184082
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Reader",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 2234.889468879359,
+            "y": -866.4499177277659,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 2077.300287592809,
+              "y": -808.1260873184082
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Shelf",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1696.0999951951483,
+            "y": -1020.6355902423841,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1683.997076994125,
+              "y": -982.0244791312731
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Copies",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1671.8941587931022,
+            "y": -943.4133680201621,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1683.997076994125,
+              "y": -982.0244791312731
+            }
+          ],
+          "manual": false
+        }
+      }
+    ]
+  ],
+  "notes": [
+    {
+      "text": "manage reutrn",
+      "transform": {
+        "x": 1847.488884084037,
+        "y": -1014.5244791312745,
+        "width": 81.11111111111131,
+        "height": 19
+      }
+    },
+    {
+      "text": "manage borrowing",
+      "transform": {
+        "x": 2027.4888840840372,
+        "y": -1007.8578124646076,
+        "width": 88.33333333333348,
+        "height": 19
+      }
+    }
+  ]
+}
